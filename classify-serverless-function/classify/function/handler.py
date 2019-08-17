@@ -25,4 +25,4 @@ def handle(req):
         req (str): request body
     """
     check = ToxicityCheck()
-    return str(check.isToxic(req.comment))
+    return str(check.isToxic(req))
