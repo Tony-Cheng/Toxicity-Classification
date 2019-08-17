@@ -1,7 +1,6 @@
 import fastai.text as text
 import fastai
 
-
 class ToxicityclassifierConfig():
     model_folder = './models'
 
@@ -25,6 +24,5 @@ def handle(req):
     Args:
         req (str): request body
     """
-    comment = req.comment
     check = ToxicityCheck()
-    return str(check.isToxic(comment))
+    return str(check.isToxic(req.comment))
