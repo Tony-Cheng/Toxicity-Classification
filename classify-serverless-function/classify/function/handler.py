@@ -10,8 +10,6 @@ class ToxicityCheck:
         super().__init__(*args, **kwargs)
         path = text.Path(
             ToxicityclassifierConfig.model_folder)
-        text.defaults.device = text.torch.device('cpu')
-        fastai.torch_core.defaults.device = text.torch.device('cpu')
         self.learner = text.load_learner(path, 'text_toxicity.pkl').to_fp32()
 
     def isToxic(self, comment):
