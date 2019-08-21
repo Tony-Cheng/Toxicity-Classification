@@ -1,0 +1,1 @@
+sudo faas-cli build -f ./stack.yml
